@@ -95,13 +95,15 @@ for i in range(len(w)):
     distances_5.append(d)
 ```
 ## Pearson Correlation Matrix/Array of the three methods
-the fourth row/column stands for distance_5 above
+
 ```
 array([[1.        , 0.84506762, 0.6932991 , 0.21989351],
        [0.84506762, 1.        , 0.68926445, 0.23627123],
        [0.6932991 , 0.68926445, 1.        , 0.43578751],
        [0.21989351, 0.23627123, 0.43578751, 1.        ]])
-```    
+```  
+The fourth row/column stands for distance_5 above, while the first three rows and columns are the Pearson correlations between the three methods proposed as above.
+
 ### Justification: 
 The larger the distance_5 corresponding value for a certain word is, the more semantic changes it has experienced since it drifted away from most of its similar word from the first decade to the last decade.
 The more correlated the distances_i (i = 1, 2, 3) is with distances_5 (the distances between the word and its most similar word), the more the method captures the semantic changes in the word over time.
