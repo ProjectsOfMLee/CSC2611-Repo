@@ -104,9 +104,13 @@ array([[1.        , 0.84506762, 0.6932991 , 0.21989351],
 ```  
 The fourth row/column stands for distance_5 above, while the first three rows and columns are the Pearson correlations between the three methods proposed as above.
 
+## Accuracy Evaluation
+To evaluate the accuracy of the three methods, I used the Pearson correlation between my methods and distance_5, mentioned as the fourth column in the Pearson correlation array above. 
+
 ### Justification: 
 The larger the distance_5 corresponding value for a certain word is, the more semantic changes it has experienced since it drifted away from most of its similar word from the first decade to the last decade.
-The more correlated the distances_i (i = 1, 2, 3) is with distances_5 (the distances between the word and its most similar word), the more the method captures the semantic changes in the word over time.
+
+Evaluate: the more correlated the distances_i (i = 1, 2, 3) is with distances_5 (the distances between the word and its most similar word), the more the method captures the semantic changes in the word over time. 
 
 # Implement a simple way of detecting the point(s) of semantic change in each word based on its diachronic embedding time course—visualize the time course and the detected change point(s). [3 points]
 The simple way of detecting the point(s) of semantic change in each word based on its diachronic embedding time course with visualization:
