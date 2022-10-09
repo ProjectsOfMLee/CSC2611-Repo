@@ -55,18 +55,22 @@ Q2
 
 ## My Method 1: [Incremental drift] Mean Cosine Distance Per Decade Over Time 
 20_most_changes ['haven', 'goals', 'johnson', 'therapy', 'adams', 'wilson', 'princeton', 'martin', 'baltimore', 'wiley', 'berkeley', 'techniques', 'sector', 'ml', 'jones', 'harper', 'mcgraw', 'skills', 'computer', 'shri']
+
 20_least_changes ['april', 'miles', 'november', 'september', 'january', 'december', 'february', 'university', 'vessels', 'trees', 'cent', 'solution', 'july', 'decrease', 'october', 'temperature', 'buildings', 'june', 'patients', 'blood']
 
 ## My Method 2: [Incremental drift] Max Cosine Distance Over Time
 20_most_changes ['jones', 'radio', 'implications', 'variables', 'jobs', 'procedures', 'wiley', 'therapy', 'input', 'evaluation', 'programs', 'sector', 'objectives', 'goals', 'skills', 'shri', 'mcgraw', 'ml', 'computer', 'techniques']
+
 20_least_changes ['april', 'november', 'december', 'january', 'september', 'trees', 'miles', 'solution', 'feet', 'june', 'february', 'vessels', 'century', 'duties', 'cent', 'blood', 'evening', 'buildings', 'decrease', 'july']
 
 ## My Method 3: [Inceptive drift] The Cosine Distance change between the word at the start time and at the end time
 20_most_changes ['film', 'shift', 'berkeley', 'patterns', 'perspective', 'impact', 'media', 'shri', 'van', 'approach', 'goals', 'sector', 'radio', 'computer', 'objectives', 'programs', 'techniques', 'ml', 'skills', 'mcgraw']
+
 20_least_changes ['april', 'june', 'november', 'february', 'years', 'october', 'increase', 'january', 'century', 'months', 'daughter', 'december', 'god', 'september', 'feet', 'week', 'evening', 'door', 'payment', 'miles']
 
 ## My Method 4: [Incremental drift] Min Cosine Distance Over Time¶
 20_most_changes ['necessity', 'ratio', 'measures', 'credit', 'corner', 'attitude', 'reality', 'rates', 'plants', 'staff', 'pain', 'centre', 'oxford', 'parliament', 'aspects', 'russia', 'liberty', 'news', 'establishment', 'regards']
+
 20_least_changes ['time', 'formula', 'rooms', 'film', 'equilibrium', 'colour', 'components', 'participation', 'ministers', 'blow', 'crowd', 'yield', 'berlin', 'baby', 'song', 'waste', 'sunday', 'quarters', 'leadership', 'pocket']
 
 # Evaluate the three methods following this proposed procedure and report Pearson correlations or relevant test statistics. [2 points]
@@ -92,12 +96,12 @@ for i in range(len(w)):
 ```
 ## Pearson Correlation Matrix/Array of the three methods
 the fourth row/column stands for distance_5 above
-
+```
 array([[1.        , 0.84506762, 0.6932991 , 0.21989351],
        [0.84506762, 1.        , 0.68926445, 0.23627123],
        [0.6932991 , 0.68926445, 1.        , 0.43578751],
        [0.21989351, 0.23627123, 0.43578751, 1.        ]])
-       
+```    
 ### Justification: 
 The larger the distance_5 corresponding value for a certain word is, the more semantic changes it has experienced since it drifted away from most of its similar word from the first decade to the last decade.
 The more correlated the distances_i (i = 1, 2, 3) is with distances_5 (the distances between the word and its most similar word), the more the method captures the semantic changes in the word over time.
