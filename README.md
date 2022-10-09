@@ -109,6 +109,7 @@ The larger the distance_5 corresponding value for a certain word is, the more se
 The more correlated the distances_i (i = 1, 2, 3) is with distances_5 (the distances between the word and its most similar word), the more the method captures the semantic changes in the word over time.
 
 # Implement a simple way of detecting the point(s) of semantic change in each word based on its diachronic embedding time course—visualize the time course and the detected change point(s). [3 points]
-The simple way of detecting the point(s) of semantic change in each word based on its diachronic embedding time course is as follows with visualization.
+The simple way of detecting the point(s) of semantic change in each word based on its diachronic embedding time course with visualization:
 <img width="820" alt="Screen Shot 2022-10-09 at 12 03 59" src="https://user-images.githubusercontent.com/104241750/194767195-5953aa33-fc5b-45f1-b7f1-5b85db4d9076.png">
+
 The xticks stands for the number of decade, for example, "0" means the first decade, "8" means the ninth decade.
